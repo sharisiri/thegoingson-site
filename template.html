@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>the goings on</title>
+	 <meta name="description" content="twelve new tunes, curated weekly.">
+	<meta charset="utf-8">
+	<style type="text/css">
+	    /* RESET */
+*,*:before,*:after{box-sizing:border-box;}html,body{margin:0;height:100%;}a{text-decoration:inherit;color:inherit;}p,h1,h2,h3,h4,h5,h6{margin:0;font-size:inherit;font-weight:inherit;}ul,ol{margin:0;padding:0;list-style-type:none;}img{display:inline-block;border:0;max-width:100%;height:auto;vertical-align:middle;}figure{margin:0;}
+        
+        html {
+            -webkit-text-size-adjust : 100%;
+        }
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, 'Sans Serif';
+			font-size: 1.7vw;
+			padding: 2%;
+			text-transform: lowercase;
+		}
+
+		.header {
+			height: 40vh;
+			position: fixed;
+			width: 100%;
+			left: 0;
+			padding: 2%;
+			top: -0.8%;
+			
+		}
+		.main-container {
+			margin-top:38vh;
+			padding-top:2%;
+			background:white;
+			z-index: 10;
+			position: relative;
+			padding-bottom:80vh;
+		}
+
+
+		header, main {
+			display: flex;
+			flex-wrap: wrap;
+			padding-bottom: 4%;
+		}
+		main {
+			padding-bottom: 8%;
+		}
+
+
+		.no-prev {
+			opacity:0.5;
+			cursor: auto !important;
+		}
+
+		.playlist-track {
+			display: flex;
+			width:100%;
+			cursor: pointer;
+		}
+		.track-number, .track-title, .track-duration, .track-spotify, .track-youtube {
+			padding: 1%;
+		}
+/*
+		.playlist-track:first-child div {
+			padding-top: 0;
+		}*/
+
+		.playlist-image-container, .playlist-title, .header-title {
+			width: 40%;
+			padding-right: 12%;
+		}
+
+		.playlist-image-container {
+			padding-left: 2%;
+		}
+		.playlist-tracks, .playlist-meta, .header-byline {
+			width: 60%;
+			padding-right: 10%;
+		}
+
+		.playlist-tracks {
+			margin-top: -1%;
+		}
+
+		.playlist-meta, .header-byline {
+			display: flex;
+		}
+
+		.track-title, .playlist-source, .header-content {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			width: 75%;
+		}
+	
+		.track-number:after {
+			display: block;
+			position: absolute;
+			top: 14%;
+			height: 100%;
+			padding: 1%;
+			visibility: hidden;
+		}
+		.playlist-track:not(.no-prev):hover .track-number:after {
+			content: ">";
+			visibility: visible;
+		}
+			
+
+		.track-duration, .playlist-duration, .header-follow {
+			text-align: right;
+			width: 18%;
+		}
+
+		.track-number, .playlist-src-meta, .header-meta {
+			width: 7%;
+			position: relative;
+		}
+		.playlist-track:hover:not(.no-prev) .track-number, .playlist-track.playing .track-number {
+			visibility: hidden;
+		}
+		.playlist-track.playing .track-number:after, .playlist-track.playing:hover .track-number:after {
+			content:"ıı";
+			visibility: visible;
+		}
+
+		.playlist-meta div, .header-byline div {
+			padding: 0 1%;
+		}
+		.show-mob {
+			display: none;
+		}
+
+		@media all and (max-width: 767px) {
+			body {
+				font-size: 4.0vw;
+				padding: 4%;
+			}
+
+
+			.playlist-image-container, .playlist-title, .playlist-tracks, .playlist-meta, .header-byline {
+				width: 100%;
+				padding-right: 0%;
+			}
+
+			.playlist-src-meta {
+				opacity: 0;
+			}
+			.show-mob {
+				display: inline;
+			}
+			.playlist-image-container {
+				padding-left: 0%;
+				padding-bottom: 4%;
+			}
+
+			.header {
+				display:block;
+				padding:4%;
+			}
+			
+
+
+		}
+	</style>
+</head>
+<body>
+	<header class="header">
+	    <h1 class="header-title">the goings on</h1>
+	    <div class="header-byline"><div class="header-meta">12</div><div class="header-content">tunes, curated weekly.</div><div class="header-follow"><a href="https://instagram.com/thegoings_on" target="_blank">follow</a></div></div>
+	</header>
+	<div class="main-container">
+	{% for playlist in playlists %}
+	<article>
+		<header>
+		<h2 class="playlist-title"><a href="{{ playlist.spotifyLink }}" target="_blank">{{ playlist.name }} <br/>by {{ playlist.curator }}</a></h2>
+		<div class="playlist-meta">
+			<div class="playlist-src-meta">@ </div>
+			<div class="playlist-source"><span class="show-mob">(</span><a href="{{ playlist.spotifyLink }}" target="_blank">spotify</a>, <a href="http://roll.io/#{{ playlist.youtube }}" target="_blank">youtube</a><span class="show-mob">)</span></div>
+			<div class="playlist-duration">{{ playlist.duration }}</div>
+		</div>
+		</header>
+		<main>
+			<div class="playlist-image-container"><a href="{{ playlist.spotifyLink }}" target="_blank"><img src="{{ playlist.image }}"/></a></div>
+			<div class="playlist-tracks">
+				{% for track in playlist.tracks %}
+			    <div class="playlist-track {% if not track.preview %}no-prev{% endif %}" data-preview="{{ track.preview }}">
+			    	<div class="track-number"> {{ track.number }}</div>
+			    	<div class="track-title"> {{ track.artist }} – {{ track.title }}</div>
+			    	<div class="track-duration"> {{ track.duration }}</div>
+			    </div>
+			    {% endfor %}
+			</div>
+		</main>
+	</article>
+	{% endfor %}
+	</div>
+	<audio>
+	<source src="audio/beep.mp3"></source>
+	Your browser isn't invited for super fun audio time.
+	</audio>
+	<script type="text/javascript">
+		var audio = document.querySelector('audio');
+		audio.onended = function() {
+		    document.querySelector('.playing').classList.remove('playing');
+		};
+		var tracks = document.querySelectorAll('.playlist-track:not(.no-prev)'), x;
+	    for (x = 0; x < tracks.length; x++) {
+	        tracks[x].addEventListener('click', function(e){
+	        	if (e.target.tagName === 'A') return;
+	        	if (e.currentTarget.classList.contains('playing')){
+	        		audio.pause();
+	        		// e.currentTarget.innerText = 'play';
+	        		e.currentTarget.classList.remove('playing');
+	        	} else {
+	        		audio.pause();
+	        		audio.src = e.currentTarget.dataset.preview;
+	        		promise = audio.play();
+	        		if (promise !== undefined) {
+						  promise.then(_ => {
+						    
+						  }).catch(error => {
+						  });
+					}
+	        		if (document.querySelector('.playing')) {
+	        			// document.querySelector('.playing').innerText = 'play';
+	        			document.querySelector('.playing').classList.remove('playing');
+	        		}
+	        		e.currentTarget.classList.add('playing');
+	        		// e.currentTarget.innerText = 'pause';
+	        	}
+	        });
+	       
+	    }
+	</script>
+
+</body>
+</html>
