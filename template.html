@@ -204,7 +204,9 @@
 			.playlist-duration {
 				width: 30%;
 			}
-			
+			.track-number {
+				width: 8%;
+			}
 
 
 		}
@@ -240,7 +242,7 @@
 			<div class="playlist-tracks">
 				{% for track in playlist.tracks %}
 			    <div class="playlist-track {% if not track.preview %}no-prev{% endif %}" data-preview="{{ track.preview }}">
-			    	<div class="track-number"> {{ track.number }}</div>
+			    	<div class="track-number">{{ track.number }}.</div>
 			    	<div class="track-title"> {{ track.artist }} – {{ track.title }}</div>
 			    	<div class="track-duration"> {{ track.duration }}</div>
 			    </div>
