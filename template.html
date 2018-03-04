@@ -61,12 +61,19 @@
 
 
 		header, main {
-			display: flex;
+			display:-webkit-box;
+			display:-ms-flexbox;
+			display:flex
 			flex-wrap: wrap;
 			padding-bottom: 4%;
 		}
 		main {
 			padding-bottom: 8%;
+		}
+
+		img {
+			-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+			        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 		}
 
 
@@ -76,7 +83,9 @@
 		}
 
 		.playlist-track {
-			display: flex;
+			display:-webkit-box;
+			display:-ms-flexbox;
+			display:flex
 			width:100%;
 			cursor: pointer;
 		}
@@ -106,7 +115,9 @@
 		}
 
 		.playlist-meta, .header-byline {
-			display: flex;
+			display:-webkit-box;
+			display:-ms-flexbox;
+			display:flex
 		}
 
 		.track-title, .playlist-source, .header-content {
