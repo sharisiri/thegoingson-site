@@ -49,15 +49,15 @@ var plObjects = [];
     	  				plObj.tracks.push(track);
     	  			}
  
-                    noPrevKeys = Object.keys(noPreviewTracks);
-                    noPrevTrksData = await got('https://api.spotify.com/v1/tracks/?market=US&ids=' + noPrevKeys.join(','), { json: true, headers: {Authorization : 'Bearer ' + accessToken} });
-                    for (z in noPrevTrksData.body.tracks){
-                        if (noPrevTrksData.body.tracks[z].preview_url){
-                            // console.log(noPrevTrksData.body.tracks[z].name)
+                    // noPrevKeys = Object.keys(noPreviewTracks);
+                    // noPrevTrksData = await got('https://api.spotify.com/v1/tracks/?market=US&ids=' + noPrevKeys.join(','), { json: true, headers: {Authorization : 'Bearer ' + accessToken} });
+                    // for (z in noPrevTrksData.body.tracks){
+                    //     if (noPrevTrksData.body.tracks[z].preview_url){
+                    //         // console.log(noPrevTrksData.body.tracks[z].name)
                             
-                            plObj.tracks[noPreviewTracks[noPrevKeys[z]]].preview = noPrevTrksData.body.tracks[z].preview_url;
-                        }
-                    }
+                    //         plObj.tracks[noPreviewTracks[noPrevKeys[z]]].preview = noPrevTrksData.body.tracks[z].preview_url;
+                    //     }
+                    // }
                     plObj.duration = msToHourMin(plObj.duration);
 
                     var ytFile = await got.post('http://roll.io/controller/controller.php?action=textbox&song_number=0', {form:true, body : {list : ytTracks}});
