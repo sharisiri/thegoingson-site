@@ -20,7 +20,7 @@ var plObjects = [];
     	  			var pl = await got(playlistItems[x].href + '?market=SE', { json: true, headers: {Authorization : 'Bearer ' + accessToken} });
     	  			var plObj = {};
     	  			plObj.name = pl.body.name;
-                    plObj.number = plObj.name[plObj.name.indexOf('#') + 1];
+                    plObj.number = parseInt(plObj.name.substr(plObj.name.indexOf('#')+1));
     	  			plObj.spotifyLink = pl.body.external_urls.spotify;
     	  			plObj.image = 'img/' + plObj.name.replace(/\s/g, '-').replace('#','') + '.jpg';
                     await sharp(plObj.image,{progressive: true}).resize(960, 960).max().toFile('site/' + plObj.image);
