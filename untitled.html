@@ -114,7 +114,7 @@
 		}*/
 
 		.playlist-image-container {
-			padding-left: 2%;
+			padding-left: 40%;
 		}
 		.playlist-image-container, .playlist-title, .header-title, .playlist-tracks, .playlist-meta, .header-byline {
 			width: 40%;
@@ -182,9 +182,6 @@
 				padding: 4%;
 			}
 
-
-
-
 			.playlist-image-container, .playlist-title, .playlist-tracks, .playlist-meta, .header-byline, .header-title {
 				width: 100%;
 				padding-right: 0%;
@@ -229,19 +226,19 @@
 	    <h1 class="header-title">the goings on</h1>
 	    <div class="header-byline"><div class="header-meta">12</div><div class="header-content">tunes, curated weekly.</div><div class="header-follow"><a href="https://instagram.com/thegoings_on" target="_blank">follow</a></div></div>
 	</header>
-	<div class="main-container">
-	{% for playlist in playlists %}
 	<article>
 		<header>
-		<h2 class="playlist-title"><a href="{{ playlist.spotifyLink }}" target="_blank">{{ playlist.name }} <br/>by {{ playlist.curator }}</a></h2>
+		<h2 class="playlist-title"></h2>
 		<div class="playlist-meta">
+				<div class="main-container">
+				{% for playlist in playlists %}
 			<div class="playlist-src-meta">on</div>
 			<div class="playlist-source"><span class="show-mob">(</span><a href="{{ playlist.spotifyLink }}" target="_blank">spotify</a><span class="show-mob">)</span></div>
 			<div class="playlist-duration">{{ playlist.duration }}</div>
 		</div>
 		</header>
 		<main>
-			<div class="playlist-image-container"><a href="{{ playlist.spotifyLink }}" target="_blank"><img src="{{ playlist.image }}"/></a></div>
+			<div class="playlist-image-container"><<a href="{{ playlist.spotifyLink }}" target="_blank"><img src="{{ playlist.image }}"/></a></div>
 			<div class="playlist-tracks">
 				{% for track in playlist.tracks %}
 			    <div class="playlist-track {% if not track.preview %}no-prev{% endif %}" data-preview="{{ track.preview }}">
