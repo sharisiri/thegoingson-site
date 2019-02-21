@@ -23,7 +23,7 @@ var plObjects = [];
                     plObj.number = parseInt(plObj.name.substr(plObj.name.indexOf('#')+1));
     	  			plObj.spotifyLink = pl.body.external_urls.spotify;
     	  			plObj.image = 'img/' + plObj.name.replace(/\s/g, '-').replace('#','') + '.jpg';
-                    // await sharp(plObj.image,{progressive: true}).resize(960, 960).max().toFile('site/' + plObj.image);
+                    await sharp(plObj.image,{progressive: true}).resize(960, 960).max().toFile('site/' + plObj.image);
     	  			plObj.curator = '';(new RegExp(/curated by ([\s\S]*?)\./g)).exec(pl.body.description)[1];
     	  			plObj.tracks = [];
     	  			plObj.duration = 0;
