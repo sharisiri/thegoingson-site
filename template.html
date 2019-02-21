@@ -227,17 +227,17 @@
 	</style>
 </head>
 <body>
-	<header class="header">
-	    <div class="header-byline"><h1 class="header-title">the goings on</h1><div class="header-meta">12</div><div class="header-content">tunes, curated weekly.</div><div class="header-follow"><a href="https://instagram.com/thegoings_on" target="_blank">follow</a></div></div>
+		<header class="header">
+	    <h1 class="header-title">the goings on</h1>
+	    <div class="header-byline"><div class="header-meta">12</div><div class="header-content">tunes, curated weekly.</div><div class="header-follow"><a href="https://instagram.com/thegoings_on" target="_blank">follow</a></div></div>
 	</header>
+	<div class="main-container">
+	{% for playlist in playlists %}
 	<article>
 		<header>
+		<h2 class="playlist-title"><a href="{{ playlist.spotifyLink }}" target="_blank">{{ playlist.name }} <br/>by {{ playlist.curator }}</a></h2>
 		<div class="playlist-meta">
-				<div class="main-container">
-				{% for playlist in playlists %}
 			<div class="playlist-src-meta">on</div>
-				<h2 class="playlist-title"></h2>
-			<div class="playlist-source"><span class="show-mob">(</span><a href="{{ playlist.spotifyLink }}" target="_blank">spotify</a><span class="show-mob">)</span></div>
 			<div class="playlist-duration">{{ playlist.duration }}</div>
 		</div>
 		</header>
