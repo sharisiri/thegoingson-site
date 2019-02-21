@@ -16,7 +16,7 @@ var plObjects = [];
     	  	var playlistItems = playlists.body.items;
     	  	for (x in playlistItems) {
     	  		if (playlistItems[x].name.startsWith('the goings on #')){
-                    // console.log(playlistItems[x].href);
+                    console.log(playlistItems[x].href);
     	  			var pl = await got(playlistItems[x].href + '?market=SE', { json: true, headers: {Authorization : 'Bearer ' + accessToken} });
     	  			var plObj = {};
     	  			plObj.name = pl.body.name;
