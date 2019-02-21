@@ -121,11 +121,10 @@
 
 		}
 		.playlist-title, .header-title, .playlist-tracks, .playlist-meta, .header-byline {
+			padding-left: 2%;
+			margin: 0% auto;
 			width: 100%;
 			padding-right: 10%;
-			margin: 0% auto;
-		}
-
 		}
 
 		.playlist-tracks {
@@ -190,7 +189,7 @@
 			}
 
 			.playlist-image-container, .playlist-title, .playlist-tracks, .playlist-meta, .header-byline, .header-title {
-				width: 80%;
+				width: 100%;
 				padding-right: 0%;
 			}
 
@@ -211,7 +210,7 @@
 			}
 
 			.playlist-duration {
-				width: 60%;
+				width: 100%;
 			}
 
 
@@ -245,7 +244,7 @@
 		</div>
 		</header>
 		<main>
-			<div class="playlist-image-container"><<a href="{{ playlist.spotifyLink }}" target="_blank"><img src="{{ playlist.image }}"/></a></div>
+			<div class="playlist-image-container"><a href="{{ playlist.spotifyLink }}" target="_blank"><img src="{{ playlist.image }}"/></a></div>
 			<div class="playlist-tracks">
 				{% for track in playlist.tracks %}
 			    <div class="playlist-track {% if not track.preview %}no-prev{% endif %}" data-preview="{{ track.preview }}">
