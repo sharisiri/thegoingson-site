@@ -11,7 +11,7 @@ var plObjects = [];
         try {
         	var accessToken = await got.post('https://accounts.spotify.com/api/token', {form:true, body : {grant_type :"client_credentials"}, headers: {Authorization : 'Basic ' + client_cred} });
         	accessToken = JSON.parse(accessToken.body).access_token;
-        	// console.log(accessToken);
+        	console.log(accessToken);
             var playlists = await got('https://api.spotify.com/v1/users/ombudsmannen/playlists?limit=50', { json: true, headers: {Authorization : 'Bearer ' + accessToken} });
     	  	var playlistItems = playlists.body.items;
     	  	for (x in playlistItems) {
@@ -24,7 +24,7 @@ var plObjects = [];
     	  			plObj.spotifyLink = pl.body.external_urls.spotify;
     	  			plObj.image = 'img/' + plObj.name.replace(/\s/g, '-').replace('#','') + '.jpg';
                     await sharp(plObj.image,{progressive: true}).resize(960, 960).max().toFile('site/' + plObj.image);
-    	  			plObj.curator = '';//(new RegExp(/curated by ([\s\S]*?)\./g)).exec(pl.body.description)[1];
+    	  			plObj.curator = '';(new RegExp(/curated by ([\s\S]*?)\./g)).exec(pl.body.description)[1];
     	  			plObj.tracks = [];
     	  			plObj.duration = 0;
                     var noPreviewTracks = {}
