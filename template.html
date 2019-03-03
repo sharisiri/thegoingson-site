@@ -50,24 +50,21 @@
 			padding: 2%;
 			text-transform: lowercase;
 			background:black;
+
 		}
 
 		.header {
-			height: 40vh;
-			position: fixed;
-			width: 100%;
-			left: 0;
-			padding: 2%;
-			top: -0.8%;
+			padding-bottom: 40vh;
+		
 		}
 		.main-container {
-			margin-top:38vh;
+			/*margin-top:38vh;
 			padding-top:2%;
 			z-index: 10;
 			position: relative;
 			padding-bottom:80vh;
 			-webkit-box-shadow: 0 -20px 20px rgba(0, 0, 0, 1.0);
-			box-shadow: 0 -20px 20px rgba(0, 0, 0, 1.0);
+			box-shadow: 0 -20px 20px rgba(0, 0, 0, 1.0);*/
 		}
 
 		a:hover {
@@ -81,10 +78,23 @@
 			display:flex;
 			flex-wrap: wrap;
 			padding-bottom: 4%;
+			text-align: center;
 			justify-content: center;
 		}
+		.header-title, .header-follow {
+			width: 25%;
+		}
+		.header-byline {
+		 	width: 50%;
+	 	}
+	 	.header-title {
+	 		text-align: center;
+	 	}
+		.playlist-title, .playlist-duration, .playlist-image-container {
+			width: 100%;
+		}
 		main {
-			padding-bottom: 8%;
+			padding-bottom: 20vh;
 		}
 
 		img {
@@ -103,7 +113,7 @@
 			display:-webkit-box;
 			display:-ms-flexbox;
 			display:flex;
-			width:60%;
+			/*width:60%;*/
 			cursor: pointer;
 		}
 		.track-number, .track-title, .track-duration, .track-spotify, .track-youtube {
@@ -115,43 +125,28 @@
 		}*/
 
 		}
-		.playlist-title, .header-title, .playlist-tracks, .playlist-meta, .header-byline {
-			padding-left: 2%;
-			margin: 0% auto;
-			width: 100%;
-			padding-right: 10%;
-		}
 
-		.playlist-title, .header-title {
-			width: 40%;
-			padding-right: 12%;
-		}
 
 		.playlist-image-container {
 			width: 100%;
 			text-align: center;
 		}
 
-		.playlist-tracks, .playlist-meta, .header-byline {
-			width: 60%;
-			padding-right: 10%;
-		}
-
 		.playlist-tracks {
-			margin-top: -1%;
+			text-align: left;
+			width: 100%;
+			max-width: 800px;
+	
 		}
 
-		.playlist-meta, .header-byline {
-			display:-webkit-box;
-			display:-ms-flexbox;
-			display:flex;
-		}
 
-		.track-title, .playlist-source, .header-content {
+
+
+		.track-title {
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
-			width: 60%;
+			width: 79%;
 		}
 	
 		.track-number:after {
@@ -168,7 +163,7 @@
 		}
 			
 
-		.track-duration, .playlist-duration, .header-follow {
+		.track-duration {
 			text-align: right;
 			width: 14%;
 		}
@@ -184,10 +179,10 @@
 			content:"ıı";
 			visibility: visible;
 		}
-
+/*
 		.playlist-meta div, .header-byline div {
 			padding: 0 1%;
-		}
+		}*/
 		.show-mob {
 			display: none;
 		}
@@ -198,7 +193,11 @@
 				padding: 4%;
 			}
 
-			.playlist-image-container, .playlist-title, .playlist-tracks, .playlist-meta, .header-byline, .header-title {
+			img {
+				max-width: 100%;
+			}
+
+/*			.playlist-image-container, .playlist-title, .playlist-tracks, .playlist-meta, .header-byline, .header-title {
 				width: 100%;
 				padding-right: 0%;
 			}
@@ -221,7 +220,7 @@
 
 			.playlist-duration {
 				width: 100%;
-			}
+			}*/
 
 
 
@@ -240,17 +239,16 @@
 <body>
 		<header class="header">
 	    <h1 class="header-title">the goings on</h1>
-	    <div class="header-byline"><div class="header-meta">12</div><div class="header-content">tunes, curated weekly.</div><div class="header-follow"><a href="https://instagram.com/thegoings_on" target="_blank">follow</a></div></div>
+	<div class="header-byline">12 tunes, curated weekly.</div>
+	<div class="header-follow"><a href="https://instagram.com/thegoings_on" target="_blank">follow</a></div></div>
 	</header>
 	<div class="main-container">
 	{% for playlist in playlists %}
 	<article>
 		<header>
-		<h2 class="playlist-title"><a href="{{ playlist.spotifyLink }}" target="_blank">{{ playlist.name }} <br/>by {{ playlist.curator }}</a></h2>
-		<div class="playlist-meta">
-			<div class="playlist-src-meta">on</div><a href="{{ playlist.spotifyLink }}" target="_blank">spotify</a>
-			<div class="playlist-duration">{{ playlist.duration }}</div>
-		</div>
+		<h2 class="playlist-title"><a href="{{ playlist.spotifyLink }}" target="_blank">{{ playlist.name }}</a></h2>
+			<div class="playlist-duration">({{ playlist.duration }})</div>
+
 		</header>
 		<main>
 			<div class="playlist-image-container"><a href="{{ playlist.spotifyLink }}" target="_blank"><img src="{{ playlist.image }}"/></a></div>
