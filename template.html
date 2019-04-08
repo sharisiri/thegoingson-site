@@ -252,7 +252,7 @@
 			<div class="playlist-image-container"><a href="{{ playlist.spotifyLink }}" target="_blank"><img src="{{ playlist.image }}"/></a></div>
 			<div class="playlist-tracks">
 				{% for track in playlist.tracks %}
-			    <div class="playlist-track {% if not track.preview %}no-prev{% endif %}" data-preview="{{ track.preview }}">
+			    <div class="playlist-track >
 			    	<div class="track-number">{{ track.number }}</div>
 			    	<div class="track-title"> {{ track.artist }} – {{ track.title }}</div>
 			    	<div class="track-duration"> {{ track.duration }}</div>
