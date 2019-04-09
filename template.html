@@ -267,40 +267,7 @@
 	<source src=""></source>
 	Your browser isn't invited for super fun audio time.
 	</audio>
-	<script type="text/javascript">
-		var audio = document.querySelector('audio');
-		audio.onended = function() {
-		    document.querySelector('.playing').classList.remove('playing');
-		};
-		var tracks = document.querySelectorAll('.playlist-track:not(.no-prev)'), x;
-	    for (x = 0; x < tracks.length; x++) {
-	        tracks[x].addEventListener('click', function(e){
-	        	if (e.target.tagName === 'A') return;
-	        	if (e.currentTarget.classList.contains('playing')){
-	        		audio.pause();
-	        		// e.currentTarget.innerText = 'play';
-	        		e.currentTarget.classList.remove('playing');
-	        	} else {
-	        		audio.pause();
-	        		audio.src = e.currentTarget.dataset.preview;
-	        		promise = audio.play();
-	        		if (promise !== undefined) {
-						  promise.then(_ => {
-						    
-						  }).catch(error => {
-						  });
-					}
-	        		if (document.querySelector('.playing')) {
-	        			// document.querySelector('.playing').innerText = 'play';
-	        			document.querySelector('.playing').classList.remove('playing');
-	        		}
-	        		e.currentTarget.classList.add('playing');
-	        		// e.currentTarget.innerText = 'pause';
-	        	}
-	        });
-	       
-	    }
-	</script>
+
 
 </body>
 </html>
