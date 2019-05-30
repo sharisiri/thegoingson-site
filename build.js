@@ -12,7 +12,7 @@ var plObjects = [];
         	var accessToken = await got.post('https://accounts.spotify.com/api/token', {form:true, body : {grant_type :"client_credentials"}, headers: {Authorization : 'Basic ' + client_cred} });
         	accessToken = JSON.parse(accessToken.body).access_token;
         	console.log(accessToken);
-            var playlists = await got('https://api.spotify.com/v2/users/ombudsmannen/playlists?limit=50', { json: true, headers: {Authorization : 'Bearer ' + accessToken} });
+            var playlists = await got('https://api.spotify.com/v1/users/ombudsmannen/playlists?limit=50', { json: true, headers: {Authorization : 'Bearer ' + accessToken} });
     	  	var playlistItems = playlists.body.items;
     	  	for (x in playlistItems) {
     	  		if (playlistItems[x].name.startsWith('the goings on #')){
