@@ -244,7 +244,7 @@
 	{% for playlist in playlists %}
 	<article>
 		<header>
-		<h2 class="playlist-title"><a href="{{ playlist.spotifyLink }}" target="_blank">{{ playlist.name }}</a>
+		<h2 class="playlist-title"><a href="{{ playlist.spotifyLink }}" target="_blank">{{ playlist.name }}</a><br/>by {{ playlist.curator }}</a></h2>
 			<div class="playlist-duration">({{ playlist.duration }})</div>
 
 		</header>
