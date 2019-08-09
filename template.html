@@ -11,28 +11,28 @@
 	<link rel="manifest" href="icons/site.webmanifest">
 	<link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#1f1f1f">
 	<link rel="shortcut icon" href="icons/favicon.ico">
-	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-config" content="icons/browserconfig.xml">
-	<meta name="theme-color" content="#000000">
+	<meta name="theme-color" content="#ffffff">
 	<style type="text/css">
 		@font-face {
 		  font-family: 'IBM Plex Mono';
 		  font-style: normal;
-		  font-weight: 300;
+		  font-weight: 400;
 		  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("fonts/IBMPlexMono-Regular-Latin3.woff2") format("woff2"), url("fonts/IBMPlexMono-Regular-Latin3.woff") format("woff");
 		  unicode-range: 'U+0102-0103, U+1EA0-1EF9, U+20AB'; }
 
 		@font-face {
 		  font-family: 'IBM Plex Mono';
 		  font-style: normal;
-		  font-weight: 300;
+		  font-weight: 400;
 		  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("fonts/IBMPlexMono-Regular-Latin2.woff2") format("woff2"), url("fonts/IBMPlexMono-Regular-Latin2.woff") format("woff");
 		  unicode-range: 'U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF, U+FB01-FB02'; }
 
 		@font-face {
 		  font-family: 'IBM Plex Mono';
 		  font-style: normal;
-		  font-weight: 300;
+		  font-weight: 400;
 		  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("fonts/IBMPlexMono-Regular-Latin1.woff2") format("woff2"), url("fonts/IBMPlexMono-Regular-Latin1.woff") format("woff");
 		  unicode-range: 'U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212, U+FB01-FB02'; 
 		}
@@ -45,26 +45,29 @@
         }
 		body {
 			font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
-			font-size: 1.25vw;
-			color: #000;
+			font-size: 1.35vw;
 			padding: 2%;
 			text-transform: lowercase;
-			background:white;
-
 		}
 
 		.header {
-			padding-bottom: 20vh;
-		
+			height: 40vh;
+			position: fixed;
+			width: 100%;
+			left: 0;
+			padding: 2%;
+			top: -0.8%;
+			
 		}
 		.main-container {
-			/*margin-top:38vh;
+			margin-top:38vh;
 			padding-top:2%;
+			background:white;
 			z-index: 10;
 			position: relative;
 			padding-bottom:80vh;
-			-webkit-box-shadow: 0 -20px 20px rgba(0, 0, 0, 1.0);
-			box-shadow: 0 -20px 20px rgba(0, 0, 0, 1.0);*/
+			-webkit-box-shadow: 0 -20px 20px rgba(255, 255, 255, 1.0);
+			box-shadow: 0 -20px 20px rgba(255, 255, 255, 1.0);
 		}
 
 		a:hover {
@@ -78,30 +81,14 @@
 			display:flex;
 			flex-wrap: wrap;
 			padding-bottom: 4%;
-			text-align: center;
-			justify-content: center;
-		}
-		.header-title, .header-follow {
-			width: 25%;
-		}
-		.header-byline {
-		 	width: 50%;
-	 	}
-	 	.header-title {
-	 		text-align: center;
-	 	}
-		.playlist-title, .playlist-duration, .playlist-image-container {
-			width: 100%;
 		}
 		main {
-			padding-bottom: 20vh;
+			padding-bottom: 8%;
 		}
 
 		img {
 			-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-			box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-			max-width: 400px;
-			padding-bottom: 0px;
+			        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 		}
 
 
@@ -114,7 +101,7 @@
 			display:-webkit-box;
 			display:-ms-flexbox;
 			display:flex;
-			/*width:60%;*/
+			width:100%;
 			cursor: pointer;
 		}
 		.track-number, .track-title, .track-duration, .track-spotify, .track-youtube {
@@ -125,27 +112,34 @@
 			padding-top: 0;
 		}*/
 
+		.playlist-image-container, .playlist-title, .header-title {
+			width: 40%;
+			padding-right: 12%;
 		}
 
-
 		.playlist-image-container {
-			width: 100%;
-			text-align: center;
+			padding-left: 2%;
+		}
+		.playlist-tracks, .playlist-meta, .header-byline {
+			width: 60%;
+			padding-right: 10%;
 		}
 
 		.playlist-tracks {
-			text-align: left;
-			width: 100%;
-			max-width: 600px;
-			padding-top: 4%;
-	
+			margin-top: -1%;
 		}
 
-		.track-title {
+		.playlist-meta, .header-byline {
+			display:-webkit-box;
+			display:-ms-flexbox;
+			display:flex;
+		}
+
+		.track-title, .playlist-source, .header-content {
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
-			width: 79%;
+			width: 75%;
 		}
 	
 		.track-number:after {
@@ -162,9 +156,9 @@
 		}
 			
 
-		.track-duration {
+		.track-duration, .playlist-duration, .header-follow {
 			text-align: right;
-			width: 14%;
+			width: 18%;
 		}
 
 		.track-number, .playlist-src-meta, .header-meta {
@@ -178,10 +172,10 @@
 			content:"ıı";
 			visibility: visible;
 		}
-/*
+
 		.playlist-meta div, .header-byline div {
 			padding: 0 1%;
-		}*/
+		}
 		.show-mob {
 			display: none;
 		}
@@ -192,11 +186,10 @@
 				padding: 4%;
 			}
 
-			img {
-				max-width: 100%;
-			}
 
-/*			.playlist-image-container, .playlist-title, .playlist-tracks, .playlist-meta, .header-byline, .header-title {
+
+
+			.playlist-image-container, .playlist-title, .playlist-tracks, .playlist-meta, .header-byline, .header-title {
 				width: 100%;
 				padding-right: 0%;
 			}
@@ -218,8 +211,8 @@
 			}
 
 			.playlist-duration {
-				width: 100%;
-			}*/
+				width: 30%;
+			}
 
 
 
@@ -236,24 +229,26 @@
 	</style>
 </head>
 <body>
-		<header class="header">
+	<header class="header">
 	    <h1 class="header-title">the goings on</h1>
-	<div class="header-byline">12 tunes, curated weekly.</div>
-	<div class="header-follow"><a href="https://instagram.com/thegoings_on" target="_blank">follow</a></div></div>
+	    <div class="header-byline"><div class="header-meta">12</div><div class="header-content">tunes, curated weekly.</div><div class="header-follow"><a href="https://instagram.com/thegoings_on" target="_blank">follow</a></div></div>
 	</header>
 	<div class="main-container">
 	{% for playlist in playlists %}
 	<article>
 		<header>
 		<h2 class="playlist-title"><a href="{{ playlist.spotifyLink }}" target="_blank">{{ playlist.name }} <br/>by {{ playlist.curator }}</a></h2>
-			<div class="playlist-duration">({{ playlist.duration }})</div>
-
+		<div class="playlist-meta">
+			<div class="playlist-src-meta">on</div>
+			<div class="playlist-source"><span class="show-mob">(</span><a href="{{ playlist.spotifyLink }}" target="_blank">spotify</a>, <a href="http://roll.io/#{{ playlist.youtube }}" target="_blank">youtube</a><span class="show-mob">)</span></div>
+			<div class="playlist-duration">{{ playlist.duration }}</div>
+		</div>
 		</header>
 		<main>
 			<div class="playlist-image-container"><a href="{{ playlist.spotifyLink }}" target="_blank"><img src="{{ playlist.image }}"/></a></div>
 			<div class="playlist-tracks">
 				{% for track in playlist.tracks %}
-			    <div class="playlist-track" data-preview="{{ track.preview }}">
+			    <div class="playlist-track {% if not track.preview %}no-prev{% endif %}" data-preview="{{ track.preview }}">
 			    	<div class="track-number">{{ track.number }}</div>
 			    	<div class="track-title"> {{ track.artist }} – {{ track.title }}</div>
 			    	<div class="track-duration"> {{ track.duration }}</div>
@@ -268,6 +263,40 @@
 	<source src=""></source>
 	Your browser isn't invited for super fun audio time.
 	</audio>
+	<script type="text/javascript">
+		var audio = document.querySelector('audio');
+		audio.onended = function() {
+		    document.querySelector('.playing').classList.remove('playing');
+		};
+		var tracks = document.querySelectorAll('.playlist-track:not(.no-prev)'), x;
+	    for (x = 0; x < tracks.length; x++) {
+	        tracks[x].addEventListener('click', function(e){
+	        	if (e.target.tagName === 'A') return;
+	        	if (e.currentTarget.classList.contains('playing')){
+	        		audio.pause();
+	        		// e.currentTarget.innerText = 'play';
+	        		e.currentTarget.classList.remove('playing');
+	        	} else {
+	        		audio.pause();
+	        		audio.src = e.currentTarget.dataset.preview;
+	        		promise = audio.play();
+	        		if (promise !== undefined) {
+						  promise.then(_ => {
+						    
+						  }).catch(error => {
+						  });
+					}
+	        		if (document.querySelector('.playing')) {
+	        			// document.querySelector('.playing').innerText = 'play';
+	        			document.querySelector('.playing').classList.remove('playing');
+	        		}
+	        		e.currentTarget.classList.add('playing');
+	        		// e.currentTarget.innerText = 'pause';
+	        	}
+	        });
+	       
+	    }
+	</script>
 
 </body>
 </html>
