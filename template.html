@@ -21,12 +21,14 @@
 		  font-weight: 400;
 		  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("fonts/IBMPlexMono-Regular-Latin3.woff2") format("woff2"), url("fonts/IBMPlexMono-Regular-Latin3.woff") format("woff");
 		  unicode-range: 'U+0102-0103, U+1EA0-1EF9, U+20AB'; }
+
 		@font-face {
 		  font-family: 'IBM Plex Mono';
 		  font-style: normal;
 		  font-weight: 400;
 		  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("fonts/IBMPlexMono-Regular-Latin2.woff2") format("woff2"), url("fonts/IBMPlexMono-Regular-Latin2.woff") format("woff");
 		  unicode-range: 'U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF, U+FB01-FB02'; }
+
 		@font-face {
 		  font-family: 'IBM Plex Mono';
 		  font-style: normal;
@@ -34,6 +36,7 @@
 		  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("fonts/IBMPlexMono-Regular-Latin1.woff2") format("woff2"), url("fonts/IBMPlexMono-Regular-Latin1.woff") format("woff");
 		  unicode-range: 'U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212, U+FB01-FB02'; 
 		}
+
 	    /* RESET */
 *,*:before,*:after{box-sizing:border-box;}html,body{margin:0;height:100%;}a{text-decoration:inherit;color:inherit;}p,h1,h2,h3,h4,h5,h6{margin:0;font-size:inherit;font-weight:inherit;}ul,ol{margin:0;padding:0;list-style-type:none;}img{display:inline-block;border:0;max-width:100%;height:auto;vertical-align:middle;}figure{margin:0;}
         
@@ -46,6 +49,7 @@
 			padding: 2%;
 			text-transform: lowercase;
 		}
+
 		.header {
 			height: 40vh;
 			position: fixed;
@@ -65,9 +69,12 @@
 			-webkit-box-shadow: 0 -20px 20px rgba(255, 255, 255, 1.0);
 			box-shadow: 0 -20px 20px rgba(255, 255, 255, 1.0);
 		}
+
 		a:hover {
 			text-decoration: underline;
 		}
+
+
 		header, main {
 			display:-webkit-box;
 			display:-ms-flexbox;
@@ -78,14 +85,18 @@
 		main {
 			padding-bottom: 8%;
 		}
+
 		img {
 			-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 			        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 		}
+
+
 		.no-prev {
 			opacity:0.5;
 			cursor: auto !important;
 		}
+
 		.playlist-track {
 			display:-webkit-box;
 			display:-ms-flexbox;
@@ -100,10 +111,12 @@
 		.playlist-track:first-child div {
 			padding-top: 0;
 		}*/
+
 		.playlist-image-container, .playlist-title, .header-title {
 			width: 40%;
 			padding-right: 12%;
 		}
+
 		.playlist-image-container {
 			padding-left: 2%;
 		}
@@ -111,14 +124,17 @@
 			width: 60%;
 			padding-right: 10%;
 		}
+
 		.playlist-tracks {
 			margin-top: -1%;
 		}
+
 		.playlist-meta, .header-byline {
 			display:-webkit-box;
 			display:-ms-flexbox;
 			display:flex;
 		}
+
 		.track-title, .playlist-source, .header-content {
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -139,10 +155,12 @@
 			visibility: visible;
 		}
 			
+
 		.track-duration, .playlist-duration, .header-follow {
 			text-align: right;
 			width: 18%;
 		}
+
 		.track-number, .playlist-src-meta, .header-meta {
 			width: 7%;
 			position: relative;
@@ -154,21 +172,28 @@
 			content:"ıı";
 			visibility: visible;
 		}
+
 		.playlist-meta div, .header-byline div {
 			padding: 0 1%;
 		}
 		.show-mob {
 			display: none;
 		}
+
 		@media all and (max-width: 568px) {
 			body {
 				font-size: 3.5vw;
 				padding: 4%;
 			}
+
+
+
+
 			.playlist-image-container, .playlist-title, .playlist-tracks, .playlist-meta, .header-byline, .header-title {
 				width: 100%;
 				padding-right: 0%;
 			}
+
 			.playlist-src-meta {
 				opacity: 0;
 			}
@@ -179,19 +204,27 @@
 				padding-left: 0%;
 				padding-bottom: 4%;
 			}
+
 			.header {
 				display:block;
 				padding:4%;
 			}
+
 			.playlist-duration {
 				width: 30%;
 			}
+
+
+
 		}
+
 		@media all and (max-width:768px) {
 			a:hover {
 				text-decoration: none;
 			}
+
 		
+
 		}
 	</style>
 </head>
@@ -215,7 +248,7 @@
 			<div class="playlist-image-container"><a href="{{ playlist.spotifyLink }}" target="_blank"><img src="{{ playlist.image }}"/></a></div>
 			<div class="playlist-tracks">
 				{% for track in playlist.tracks %}
-			    <div class="playlist-track">
+			    <div class="playlist-track {% if not track.preview %}no-prev{% endif %}" data-preview="{{ track.preview }}">
 			    	<div class="track-number">{{ track.number }}</div>
 			    	<div class="track-title"> {{ track.artist }} – {{ track.title }}</div>
 			    	<div class="track-duration"> {{ track.duration }}</div>
