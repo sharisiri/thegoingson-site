@@ -34,12 +34,12 @@
 		  font-style: normal;
 		  font-weight: 400;
 		  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("fonts/IBMPlexMono-Regular-Latin1.woff2") format("woff2"), url("fonts/IBMPlexMono-Regular-Latin1.woff") format("woff");
-		  unicode-range: 'U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212, U+FB01-FB02'; 
+		  unicode-range: 'U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212, U+FB01-FB02';
 		}
 
 	    /* RESET */
 *,*:before,*:after{box-sizing:border-box;}html,body{margin:0;height:100%;}a{text-decoration:inherit;color:inherit;}p,h1,h2,h3,h4,h5,h6{margin:0;font-size:inherit;font-weight:inherit;}ul,ol{margin:0;padding:0;list-style-type:none;}img{display:inline-block;border:0;max-width:100%;height:auto;vertical-align:middle;}figure{margin:0;}
-        
+
         html {
             -webkit-text-size-adjust : 100%;
         }
@@ -57,7 +57,7 @@
 			left: 0;
 			padding: 2%;
 			top: -0.8%;
-			
+
 		}
 		.main-container {
 			margin-top:38vh;
@@ -141,7 +141,7 @@
 			white-space: nowrap;
 			width: 75%;
 		}
-	
+
 		.track-number:after {
 			display: block;
 			position: absolute;
@@ -154,7 +154,7 @@
 			content: ">";
 			visibility: visible;
 		}
-			
+
 
 		.track-duration, .playlist-duration, .header-follow {
 			text-align: right;
@@ -223,7 +223,7 @@
 				text-decoration: none;
 			}
 
-		
+
 
 		}
 	</style>
@@ -259,11 +259,11 @@
 	</article>
 	{% endfor %}
 	</div>
-	<audio>
+<!-- 	<audio>
 	<source src=""></source>
 	Your browser isn't invited for super fun audio time.
-	</audio>
-	<script type="text/javascript">
+	</audio> -->
+<!-- 	<script type="text/javascript">
 		var audio = document.querySelector('audio');
 		audio.onended = function() {
 		    document.querySelector('.playing').classList.remove('playing');
@@ -282,7 +282,7 @@
 	        		promise = audio.play();
 	        		if (promise !== undefined) {
 						  promise.then(_ => {
-						    
+
 						  }).catch(error => {
 						  });
 					}
@@ -294,9 +294,9 @@
 	        		// e.currentTarget.innerText = 'pause';
 	        	}
 	        });
-	       
+
 	    }
-	</script>
+	</script> -->
 
 </body>
 </html>
