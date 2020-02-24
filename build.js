@@ -27,7 +27,7 @@ var plObjects = [];
                     plObj.curator = '';(new RegExp(/curated by ([\s\S]*?)\./g)).exec(pl.body.description)[1];
                     plObj.tracks = [];
                     plObj.duration = 0;
-                    var noPreviewTracks = {}
+                    // var noPreviewTracks = {}
                     var tracks = pl.body.tracks.items;
                     var ytTracks = '';
                     for (y in tracks) {
