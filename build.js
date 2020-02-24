@@ -39,10 +39,10 @@ var plObjects = [];
                         ytTracks += track.artist + ' - ' + track.title + '\n';
                         track.duration = msToTime(tracks[y].track.duration_ms);
                         plObj.duration += tracks[y].track.duration_ms;
-                        track.preview = tracks[y].track.preview_url;
-                        if (!track.preview) {
-                             // console.log(track.artist + '-' + track.title + ' ' + track.preview + "\n\n");
-                            noPreviewTracks[tracks[y].track.id] = y;
+                        // track.preview = tracks[y].track.preview_url;
+                        // if (!track.preview) {
+                        //      // console.log(track.artist + '-' + track.title + ' ' + track.preview + "\n\n");
+                        //     noPreviewTracks[tracks[y].track.id] = y;
                         }
                         track.spotifyLink = tracks[y].track.external_urls.spotify;
                         track.youtubeLink = 'https://www.youtube.com/results?search_query=' + track.artist.replace(/\s/g,'+').replace('/\,/g','') + '+' + track.title.replace(/\s/g,'+');
