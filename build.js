@@ -23,11 +23,11 @@ var plObjects = [];
                     plObj.number = parseInt(plObj.name.substr(plObj.name.indexOf('#')+1));
                     plObj.spotifyLink = pl.body.external_urls.spotify;
                     plObj.image = 'img/' + plObj.name.replace(/\s/g, '-').replace('#','') + '.jpg';
-                    // await sharp(plObj.image,{progressive: true}).resize(960, 960,{ fit: 'inside', withoutEnlargement: true }).toFile('site/' + plObj.image);
+                    await sharp(plObj.image,{progressive: true}).resize(960, 960,{ fit: 'inside', withoutEnlargement: true }).toFile('site/' + plObj.image);
                     plObj.curator = '';(new RegExp(/curated by ([\s\S]*?)\./g)).exec(pl.body.description)[1];
                     plObj.tracks = [];
                     plObj.duration = 0;
-                    // var noPreviewTracks = {}
+                    var noPreviewTracks = {}
                     var tracks = pl.body.tracks.items;
                     var ytTracks = '';
                     for (y in tracks) {
@@ -39,10 +39,10 @@ var plObjects = [];
                         ytTracks += track.artist + ' - ' + track.title + '\n';
                         track.duration = msToTime(tracks[y].track.duration_ms);
                         plObj.duration += tracks[y].track.duration_ms;
-                        // track.preview = tracks[y].track.preview_url;
-                        // if (!track.preview) {
-                        //      // console.log(track.artist + '-' + track.title + ' ' + track.preview + "\n\n");
-                        //     noPreviewTracks[tracks[y].track.id] = y;
+                        track.preview = tracks[y].track.preview_url;
+                        if (!track.preview) {
+                              console.log(track.artist + '-' + track.title + ' ' + track.preview + "\n\n");
+                            noPreviewTracks[tracks[y].track.id] = y;
                         }
                         track.spotifyLink = tracks[y].track.external_urls.spotify;
                         track.youtubeLink = 'https://www.youtube.com/results?search_query=' + track.artist.replace(/\s/g,'+').replace('/\,/g','') + '+' + track.title.replace(/\s/g,'+');
@@ -53,7 +53,7 @@ var plObjects = [];
                     noPrevTrksData = await got('https://api.spotify.com/v1/tracks/?market=US&ids=' + noPrevKeys.join(','), { json: true, headers: {Authorization : 'Bearer ' + accessToken} });
                     for (z in noPrevTrksData.body.tracks){
                         if (noPrevTrksData.body.tracks[z].preview_url){
-                            // console.log(noPrevTrksData.body.tracks[z].name)
+                            console.log(noPrevTrksData.body.tracks[z].name)
 
                             plObj.tracks[noPreviewTracks[noPrevKeys[z]]].preview = noPrevTrksData.body.tracks[z].preview_url;
                         }
@@ -70,7 +70,7 @@ var plObjects = [];
                 }
 
             }
-            // console.log(plObjects);
+            console.log(plObjects);
             plObjects.sort(compare);
             var _html = nunjucks.render('template.html', {playlists : plObjects});
             var filePath = 'site/index.html';
