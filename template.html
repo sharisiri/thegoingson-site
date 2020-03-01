@@ -92,10 +92,10 @@
 		}
 
 
-/*		.no-prev {
+		.no-prev {
 			opacity:0.5;
 			cursor: auto !important;
-		}*/
+		}
 
 		.playlist-track {
 			display:-webkit-box;
@@ -107,10 +107,10 @@
 		.track-number, .track-title, .track-duration, .track-spotify, .track-youtube {
 			padding: 1%;
 		}
-/*
+
 		.playlist-track:first-child div {
 			padding-top: 0;
-		}*/
+		}
 
 		.playlist-image-container, .playlist-title, .header-title {
 			width: 40%;
@@ -150,10 +150,10 @@
 			padding: 1%;
 			visibility: hidden;
 		}
-/*		.playlist-track:not(.no-prev):hover .track-number:after {
+		.playlist-track:not(.no-prev):hover .track-number:after {
 			content: ">";
 			visibility: visible;
-		}*/
+		}
 
 
 		.track-duration, .playlist-duration, .header-follow {
@@ -165,13 +165,13 @@
 			width: 7%;
 			position: relative;
 		}
-/*		.playlist-track:hover:not(.no-prev) .track-number, .playlist-track.playing .track-number {
+		.playlist-track:hover:not(.no-prev) .track-number, .playlist-track.playing .track-number {
 			visibility: hidden;
-		}*/
-/*		.playlist-track.playing .track-number:after, .playlist-track.playing:hover .track-number:after {
+		}
+		.playlist-track.playing .track-number:after, .playlist-track.playing:hover .track-number:after {
 			content:"ıı";
 			visibility: visible;
-		}*/
+		}
 
 		.playlist-meta div, .header-byline div {
 			padding: 0 1%;
@@ -243,7 +243,7 @@
 			<div class="playlist-image-container"><a href="{{ playlist.spotifyLink }}" target="_blank"><img src="{{ playlist.image }}"/></a></div>
 			<div class="playlist-tracks">
 				{% for track in playlist.tracks %}
-<!-- 			    <div class="playlist-track {% if not track.preview %}no-prev{% endif %}" data-preview="{{ track.preview }}"> -->
+			    	<div class="playlist-track {% if not track.preview %}no-prev{% endif %}" data-preview="{{ track.preview }}">
 			    	<div class="track-number">{{ track.number }}</div>
 			    	<div class="track-title"> {{ track.artist }} – {{ track.title }}</div>
 			    	<div class="track-duration"> {{ track.duration }}</div>
