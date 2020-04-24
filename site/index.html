@@ -34,12 +34,12 @@
 		  font-style: normal;
 		  font-weight: 400;
 		  src: local("IBM Plex Mono"), local("IBMPlexMono"), url("fonts/IBMPlexMono-Regular-Latin1.woff2") format("woff2"), url("fonts/IBMPlexMono-Regular-Latin1.woff") format("woff");
-		  unicode-range: 'U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212, U+FB01-FB02'; 
+		  unicode-range: 'U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212, U+FB01-FB02';
 		}
 
 	    /* RESET */
 *,*:before,*:after{box-sizing:border-box;}html,body{margin:0;height:100%;}a{text-decoration:inherit;color:inherit;}p,h1,h2,h3,h4,h5,h6{margin:0;font-size:inherit;font-weight:inherit;}ul,ol{margin:0;padding:0;list-style-type:none;}img{display:inline-block;border:0;max-width:100%;height:auto;vertical-align:middle;}figure{margin:0;}
-        
+
         html {
             -webkit-text-size-adjust : 100%;
         }
@@ -57,7 +57,7 @@
 			left: 0;
 			padding: 2%;
 			top: -0.8%;
-			
+
 		}
 		.main-container {
 			margin-top:38vh;
@@ -80,7 +80,7 @@
 			display:-ms-flexbox;
 			display:flex;
 			flex-wrap: wrap;
-			padding-bottom: 4%;
+			margin-bottom: 4%;
 		}
 		main {
 			padding-bottom: 8%;
@@ -93,7 +93,6 @@
 
 
 		.no-prev {
-			opacity:0.5;
 			cursor: auto !important;
 		}
 
@@ -102,15 +101,15 @@
 			display:-ms-flexbox;
 			display:flex;
 			width:100%;
-			cursor: pointer;
+/*			cursor: pointer;*/
 		}
 		.track-number, .track-title, .track-duration, .track-spotify, .track-youtube {
 			padding: 1%;
 		}
-/*
+
 		.playlist-track:first-child div {
 			padding-top: 0;
-		}*/
+		}
 
 		.playlist-image-container, .playlist-title, .header-title {
 			width: 40%;
@@ -118,7 +117,7 @@
 		}
 
 		.playlist-image-container {
-			padding-left: 2%;
+/*			padding-left: 2%;*/
 		}
 		.playlist-tracks, .playlist-meta, .header-byline {
 			width: 60%;
@@ -141,7 +140,7 @@
 			white-space: nowrap;
 			width: 75%;
 		}
-	
+
 		.track-number:after {
 			display: block;
 			position: absolute;
@@ -150,28 +149,28 @@
 			padding: 1%;
 			visibility: hidden;
 		}
-		.playlist-track:not(.no-prev):hover .track-number:after {
-			content: ">";
+/*		.playlist-track:not(.no-prev):hover .track-number:after {
+/*			content: ">";
 			visibility: visible;
-		}
-			
+		}*/
+
 
 		.track-duration, .playlist-duration, .header-follow {
 			text-align: right;
-			width: 18%;
+			width: 22%;
 		}
 
 		.track-number, .playlist-src-meta, .header-meta {
 			width: 7%;
 			position: relative;
 		}
-		.playlist-track:hover:not(.no-prev) .track-number, .playlist-track.playing .track-number {
+/*		.playlist-track:hover:not(.no-prev) .track-number, .playlist-track.playing .track-number {
 			visibility: hidden;
-		}
-		.playlist-track.playing .track-number:after, .playlist-track.playing:hover .track-number:after {
+		}*/
+/*		.playlist-track.playing .track-number:after, .playlist-track.playing:hover .track-number:after {
 			content:"ıı";
 			visibility: visible;
-		}
+		}*/
 
 		.playlist-meta div, .header-byline div {
 			padding: 0 1%;
@@ -185,9 +184,6 @@
 				font-size: 3.5vw;
 				padding: 4%;
 			}
-
-
-
 
 			.playlist-image-container, .playlist-title, .playlist-tracks, .playlist-meta, .header-byline, .header-title {
 				width: 100%;
@@ -214,16 +210,14 @@
 				width: 30%;
 			}
 
-
-
 		}
 
 		@media all and (max-width:768px) {
-			a:hover {
-				text-decoration: none;
+/*			a:hover {
+				text-decoration: none;*/
 			}
 
-		
+
 
 		}
 	</style>
@@ -237,7 +231,452 @@
 	
 	<article>
 		<header>
-		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/3GriFlowGgfyFsDgXxlGYJ" target="_blank">the goings on #8 <br/>by </a></h2>
+		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/2wokdxr927hyJqHtEOOWY1" target="_blank">the goings on #13 <br/>by shahryar siri</a></h2>
+		<div class="playlist-meta">
+			<div class="playlist-src-meta">on</div>
+			<div class="playlist-source"><span class="show-mob">(</span><a href="https://open.spotify.com/playlist/2wokdxr927hyJqHtEOOWY1" target="_blank">spotify</a><span class="show-mob">)</span></div>
+			<div class="playlist-duration">1 h 7 min</div>
+		</div>
+		</header>
+		<main>
+			<div class="playlist-image-container"><a href="https://open.spotify.com/playlist/2wokdxr927hyJqHtEOOWY1" target="_blank"><img src="img/the-goings-on-13.jpg"/></a></div>
+			<div class="playlist-tracks">
+				
+			    	<div class="playlist-track ">
+			    	<div class="track-number">1</div>
+			    	<div class="track-title"> Gil Scott-Heron &amp; Brian Jackson – Angola, Louisiana</div>
+			    	<div class="track-duration"> 05:34</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">2</div>
+			    	<div class="track-title"> Harold Melvin &amp; The Blue Notes – Don&#39;t Leave Me This Way</div>
+			    	<div class="track-duration"> 06:04</div>
+			    </div>
+			    
+			    	<div class="playlist-track no-prev">
+			    	<div class="track-number">3</div>
+			    	<div class="track-title"> Marcos Valle – Com Mais de 30</div>
+			    	<div class="track-duration"> 02:42</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">4</div>
+			    	<div class="track-title"> Lonnie Liston Smith and the Cosmic Echoes – Summer Nights</div>
+			    	<div class="track-duration"> 05:05</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">5</div>
+			    	<div class="track-title"> Earth, Wind &amp; Fire – Love&#39;s Holiday</div>
+			    	<div class="track-duration"> 04:22</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">6</div>
+			    	<div class="track-title"> Manu Dibango – Sun Explosion</div>
+			    	<div class="track-duration"> 09:10</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">7</div>
+			    	<div class="track-title"> Hailu Mergia – Gum Gum</div>
+			    	<div class="track-duration"> 06:47</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">8</div>
+			    	<div class="track-title"> Bebe Winans – Thank You - 12&quot; Mix</div>
+			    	<div class="track-duration"> 10:19</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">9</div>
+			    	<div class="track-title"> Gloria Barnes – Home</div>
+			    	<div class="track-duration"> 02:49</div>
+			    </div>
+			    
+			    	<div class="playlist-track no-prev">
+			    	<div class="track-number">10</div>
+			    	<div class="track-title"> Guru, Donald Byrd – Loungin&#39;</div>
+			    	<div class="track-duration"> 04:39</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">11</div>
+			    	<div class="track-title"> E.Bros – Funky Piano, Pt. 2</div>
+			    	<div class="track-duration"> 05:02</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">12</div>
+			    	<div class="track-title"> Alabaster DePlume – Visit Croatia</div>
+			    	<div class="track-duration"> 04:52</div>
+			    </div>
+			    
+			</div>
+		</main>
+	</article>
+	
+	<article>
+		<header>
+		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/1pmVmVAlLPXynrbah87TVu" target="_blank">the goings on #12 <br/>by jacob kalinowski</a></h2>
+		<div class="playlist-meta">
+			<div class="playlist-src-meta">on</div>
+			<div class="playlist-source"><span class="show-mob">(</span><a href="https://open.spotify.com/playlist/1pmVmVAlLPXynrbah87TVu" target="_blank">spotify</a><span class="show-mob">)</span></div>
+			<div class="playlist-duration">40 min</div>
+		</div>
+		</header>
+		<main>
+			<div class="playlist-image-container"><a href="https://open.spotify.com/playlist/1pmVmVAlLPXynrbah87TVu" target="_blank"><img src="img/the-goings-on-12.jpg"/></a></div>
+			<div class="playlist-tracks">
+				
+			    	<div class="playlist-track ">
+			    	<div class="track-number">1</div>
+			    	<div class="track-title"> Mndsgn – PorcelainPeople</div>
+			    	<div class="track-duration"> 02:54</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">2</div>
+			    	<div class="track-title"> Lifafa – Nikamma</div>
+			    	<div class="track-duration"> 03:31</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">3</div>
+			    	<div class="track-title"> HOMESHAKE – Give It to Me</div>
+			    	<div class="track-duration"> 03:08</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">4</div>
+			    	<div class="track-title"> MellowHype – Primo</div>
+			    	<div class="track-duration"> 02:14</div>
+			    </div>
+			    
+			    	<div class="playlist-track no-prev">
+			    	<div class="track-number">5</div>
+			    	<div class="track-title"> Madlib – Distant Land</div>
+			    	<div class="track-duration"> 03:58</div>
+			    </div>
+			    
+			    	<div class="playlist-track no-prev">
+			    	<div class="track-number">6</div>
+			    	<div class="track-title"> DJ Shadow – Organ Donor</div>
+			    	<div class="track-duration"> 01:57</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">7</div>
+			    	<div class="track-title"> Gladys Lazer, Nate Hendrix – KO</div>
+			    	<div class="track-duration"> 01:50</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">8</div>
+			    	<div class="track-title"> Ras G – D2E Intro</div>
+			    	<div class="track-duration"> 01:00</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">9</div>
+			    	<div class="track-title"> Monster Rally – Full Sail</div>
+			    	<div class="track-duration"> 02:34</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">10</div>
+			    	<div class="track-title"> Anuradha Paudwal – Zamane Ke Dekhein Hain Rang Hazaar</div>
+			    	<div class="track-duration"> 04:25</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">11</div>
+			    	<div class="track-title"> Mr. Scruff – Chipmunk</div>
+			    	<div class="track-duration"> 06:06</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">12</div>
+			    	<div class="track-title"> Led Zeppelin – The Lemon Song - 2012 Remaster</div>
+			    	<div class="track-duration"> 06:19</div>
+			    </div>
+			    
+			</div>
+		</main>
+	</article>
+	
+	<article>
+		<header>
+		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/7mpXTuhnOGzoiIhfIxW9oM" target="_blank">the goings on #11 <br/>by malin lundstedt</a></h2>
+		<div class="playlist-meta">
+			<div class="playlist-src-meta">on</div>
+			<div class="playlist-source"><span class="show-mob">(</span><a href="https://open.spotify.com/playlist/7mpXTuhnOGzoiIhfIxW9oM" target="_blank">spotify</a><span class="show-mob">)</span></div>
+			<div class="playlist-duration">52 min</div>
+		</div>
+		</header>
+		<main>
+			<div class="playlist-image-container"><a href="https://open.spotify.com/playlist/7mpXTuhnOGzoiIhfIxW9oM" target="_blank"><img src="img/the-goings-on-11.jpg"/></a></div>
+			<div class="playlist-tracks">
+				
+			    	<div class="playlist-track ">
+			    	<div class="track-number">1</div>
+			    	<div class="track-title"> Ann Peebles – What You Laid on Me</div>
+			    	<div class="track-duration"> 02:25</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">2</div>
+			    	<div class="track-title"> The Jones Girls – Nights Over Egypt</div>
+			    	<div class="track-duration"> 04:39</div>
+			    </div>
+			    
+			    	<div class="playlist-track no-prev">
+			    	<div class="track-number">3</div>
+			    	<div class="track-title"> Rick James – Cold Blooded</div>
+			    	<div class="track-duration"> 05:59</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">4</div>
+			    	<div class="track-title"> Hannah Williams, The Affirmations – Late Nights &amp; Heartbreak</div>
+			    	<div class="track-duration"> 04:15</div>
+			    </div>
+			    
+			    	<div class="playlist-track no-prev">
+			    	<div class="track-number">5</div>
+			    	<div class="track-title"> Celeste, Gotts Street Park – Both Sides Of The Moon</div>
+			    	<div class="track-duration"> 04:13</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">6</div>
+			    	<div class="track-title"> The Dynamics – Move on Up</div>
+			    	<div class="track-duration"> 04:52</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">7</div>
+			    	<div class="track-title"> Pip Millett – Try a Little Tenderness</div>
+			    	<div class="track-duration"> 03:12</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">8</div>
+			    	<div class="track-title"> Elisapie – Ton vieux nom</div>
+			    	<div class="track-duration"> 04:41</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">9</div>
+			    	<div class="track-title"> Philémon Cimon – Mais Pourquoi Pas Mourir Ensemble</div>
+			    	<div class="track-duration"> 04:59</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">10</div>
+			    	<div class="track-title"> Helado Negro – Pais Nublado</div>
+			    	<div class="track-duration"> 04:32</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">11</div>
+			    	<div class="track-title"> Ahmad Jamal – Swahililand</div>
+			    	<div class="track-duration"> 04:08</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">12</div>
+			    	<div class="track-title"> Jay Daniel – Paradise Valley</div>
+			    	<div class="track-duration"> 04:42</div>
+			    </div>
+			    
+			</div>
+		</main>
+	</article>
+	
+	<article>
+		<header>
+		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/5zTAloITW4Uj44LM7lv4A9" target="_blank">the goings on #10 <br/>by shahryar siri</a></h2>
+		<div class="playlist-meta">
+			<div class="playlist-src-meta">on</div>
+			<div class="playlist-source"><span class="show-mob">(</span><a href="https://open.spotify.com/playlist/5zTAloITW4Uj44LM7lv4A9" target="_blank">spotify</a><span class="show-mob">)</span></div>
+			<div class="playlist-duration">1 h 0 min</div>
+		</div>
+		</header>
+		<main>
+			<div class="playlist-image-container"><a href="https://open.spotify.com/playlist/5zTAloITW4Uj44LM7lv4A9" target="_blank"><img src="img/the-goings-on-10.jpg"/></a></div>
+			<div class="playlist-tracks">
+				
+			    	<div class="playlist-track ">
+			    	<div class="track-number">1</div>
+			    	<div class="track-title"> Roberta Flack – Feel Like Makin&#39; Love</div>
+			    	<div class="track-duration"> 02:55</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">2</div>
+			    	<div class="track-title"> Bobby Thurston – Very Last Drop</div>
+			    	<div class="track-duration"> 05:00</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">3</div>
+			    	<div class="track-title"> The Salsoul Orchestra – Sun After the Rain</div>
+			    	<div class="track-duration"> 05:34</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">4</div>
+			    	<div class="track-title"> Average White Band – Let&#39;s Go Round Again</div>
+			    	<div class="track-duration"> 04:56</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">5</div>
+			    	<div class="track-title"> Patrick Cowley, Sylvester – Do You Wanna Funk? - Radio Edit</div>
+			    	<div class="track-duration"> 03:31</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">6</div>
+			    	<div class="track-title"> Big Ben Tribe – Tarzan Loves the Summer Nights</div>
+			    	<div class="track-duration"> 07:12</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">7</div>
+			    	<div class="track-title"> George Duke – I Love You More</div>
+			    	<div class="track-duration"> 03:06</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">8</div>
+			    	<div class="track-title"> Tomoko Aran – I&#39;m in Love</div>
+			    	<div class="track-duration"> 05:53</div>
+			    </div>
+			    
+			    	<div class="playlist-track no-prev">
+			    	<div class="track-number">9</div>
+			    	<div class="track-title"> Gwen Guthrie – Stop Holding Back</div>
+			    	<div class="track-duration"> 05:56</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">10</div>
+			    	<div class="track-title"> Vera – Take Me to the Bridge</div>
+			    	<div class="track-duration"> 07:03</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">11</div>
+			    	<div class="track-title"> Greg Phillinganes – Lazy Nina</div>
+			    	<div class="track-duration"> 05:26</div>
+			    </div>
+			    
+			    	<div class="playlist-track no-prev">
+			    	<div class="track-number">12</div>
+			    	<div class="track-title"> Finis Henderson – Blame It On The Night</div>
+			    	<div class="track-duration"> 03:41</div>
+			    </div>
+			    
+			</div>
+		</main>
+	</article>
+	
+	<article>
+		<header>
+		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/7kptcqkDXOBZxrGN3ddLEc" target="_blank">the goings on #9 <br/>by shahryar siri</a></h2>
+		<div class="playlist-meta">
+			<div class="playlist-src-meta">on</div>
+			<div class="playlist-source"><span class="show-mob">(</span><a href="https://open.spotify.com/playlist/7kptcqkDXOBZxrGN3ddLEc" target="_blank">spotify</a><span class="show-mob">)</span></div>
+			<div class="playlist-duration">1 h 13 min</div>
+		</div>
+		</header>
+		<main>
+			<div class="playlist-image-container"><a href="https://open.spotify.com/playlist/7kptcqkDXOBZxrGN3ddLEc" target="_blank"><img src="img/the-goings-on-9.jpg"/></a></div>
+			<div class="playlist-tracks">
+				
+			    	<div class="playlist-track ">
+			    	<div class="track-number">1</div>
+			    	<div class="track-title"> Robert Vanderbilt, the Foundation of Souls – A Message Especially from God</div>
+			    	<div class="track-duration"> 03:48</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">2</div>
+			    	<div class="track-title"> Off The Meds, Joy Orbison – Belter - Joy O Belly Mix</div>
+			    	<div class="track-duration"> 08:03</div>
+			    </div>
+			    
+			    	<div class="playlist-track no-prev">
+			    	<div class="track-number">3</div>
+			    	<div class="track-title"> Steve Winwood – Second-Hand Woman</div>
+			    	<div class="track-duration"> 03:40</div>
+			    </div>
+			    
+			    	<div class="playlist-track no-prev">
+			    	<div class="track-number">4</div>
+			    	<div class="track-title"> Serge Gainsbourg – L&#39;anamour</div>
+			    	<div class="track-duration"> 02:36</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">5</div>
+			    	<div class="track-title"> Osunlade – Sendai</div>
+			    	<div class="track-duration"> 06:17</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">6</div>
+			    	<div class="track-title"> Candido – Jingo - 12&quot; Version</div>
+			    	<div class="track-duration"> 09:53</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">7</div>
+			    	<div class="track-title"> Stéphane Kerecki Quartet – All I Need</div>
+			    	<div class="track-duration"> 07:12</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">8</div>
+			    	<div class="track-title"> Syl Johnson – Is It Because I&#39;m Black</div>
+			    	<div class="track-duration"> 07:34</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">9</div>
+			    	<div class="track-title"> Children of Zeus – Vibrations (Divine Signature)</div>
+			    	<div class="track-duration"> 08:04</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">10</div>
+			    	<div class="track-title"> AV AV AV – Opus for Bjarke</div>
+			    	<div class="track-duration"> 02:34</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">11</div>
+			    	<div class="track-title"> Freddie Hubbard – Take It To The Ozone</div>
+			    	<div class="track-duration"> 11:06</div>
+			    </div>
+			    
+			    	<div class="playlist-track ">
+			    	<div class="track-number">12</div>
+			    	<div class="track-title"> Sverige – Gömstället</div>
+			    	<div class="track-duration"> 02:54</div>
+			    </div>
+			    
+			</div>
+		</main>
+	</article>
+	
+	<article>
+		<header>
+		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/3GriFlowGgfyFsDgXxlGYJ" target="_blank">the goings on #8 <br/>by shahryar siri</a></h2>
 		<div class="playlist-meta">
 			<div class="playlist-src-meta">on</div>
 			<div class="playlist-source"><span class="show-mob">(</span><a href="https://open.spotify.com/playlist/3GriFlowGgfyFsDgXxlGYJ" target="_blank">spotify</a><span class="show-mob">)</span></div>
@@ -248,73 +687,73 @@
 			<div class="playlist-image-container"><a href="https://open.spotify.com/playlist/3GriFlowGgfyFsDgXxlGYJ" target="_blank"><img src="img/the-goings-on-8.jpg"/></a></div>
 			<div class="playlist-tracks">
 				
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">1</div>
 			    	<div class="track-title"> Quincy Jones – Summer In The City</div>
 			    	<div class="track-duration"> 04:04</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/3d072f63165d6dd173086e93deed0284c71cba12?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">2</div>
 			    	<div class="track-title"> HNNY – Frankfurt</div>
 			    	<div class="track-duration"> 02:47</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/9c3369fe3aff5847a8a890f39506901eca956c06?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">3</div>
 			    	<div class="track-title"> Chaos In The CBD – Observe</div>
 			    	<div class="track-duration"> 04:48</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/87416a30be786712f0122bcf6863c6459aeed58c?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">4</div>
 			    	<div class="track-title"> Cortex – Poxa</div>
 			    	<div class="track-duration"> 03:16</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/566031603e2299854b6ea55601e05d6d1f8c8f68?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">5</div>
 			    	<div class="track-title"> Genius Of Time – Peace Bird</div>
 			    	<div class="track-duration"> 08:38</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/6b54e0a6868aa89da720bb8b85fa5c3e4d38fb01?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">6</div>
 			    	<div class="track-title"> Lauer – Antinat</div>
 			    	<div class="track-duration"> 06:50</div>
 			    </div>
 			    
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">7</div>
 			    	<div class="track-title"> Nuyorican Soul, Jocelyn Brown – I Am The Black Gold Of The Sun</div>
 			    	<div class="track-duration"> 05:19</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/13dc2da67b5aa3f8f6d5198cb8d80e344caad5c2?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">8</div>
 			    	<div class="track-title"> Özdemir Erdoğan – Gurbet</div>
 			    	<div class="track-duration"> 03:26</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/be6470ce99970a3afeea5c24ab9663da8b989259?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">9</div>
 			    	<div class="track-title"> King Geedorah – Fazers</div>
 			    	<div class="track-duration"> 03:17</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/4d6c711bc70dd75cd48c85488576c6f70f63a3e6?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">10</div>
 			    	<div class="track-title"> K-Lone, Ill Chill – Hope</div>
 			    	<div class="track-duration"> 04:39</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/1ddb965c02ab07d6ef50b574d7e3597400aed4c5?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">11</div>
 			    	<div class="track-title"> Moonchild – The Truth</div>
 			    	<div class="track-duration"> 03:41</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/cca2af4b2392fbf500c471d6e31898685751e046?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">12</div>
 			    	<div class="track-title"> D-Influence – I&#39;ve Got My Mind Made Up</div>
 			    	<div class="track-duration"> 05:47</div>
@@ -326,7 +765,7 @@
 	
 	<article>
 		<header>
-		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/6UOsaAY97XBvrHY7mjw5hp" target="_blank">the goings on #7 <br/>by </a></h2>
+		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/6UOsaAY97XBvrHY7mjw5hp" target="_blank">the goings on #7 <br/>by shahryar siri</a></h2>
 		<div class="playlist-meta">
 			<div class="playlist-src-meta">on</div>
 			<div class="playlist-source"><span class="show-mob">(</span><a href="https://open.spotify.com/playlist/6UOsaAY97XBvrHY7mjw5hp" target="_blank">spotify</a><span class="show-mob">)</span></div>
@@ -337,73 +776,73 @@
 			<div class="playlist-image-container"><a href="https://open.spotify.com/playlist/6UOsaAY97XBvrHY7mjw5hp" target="_blank"><img src="img/the-goings-on-7.jpg"/></a></div>
 			<div class="playlist-tracks">
 				
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/a624cdc9e70768539cc89e6a164d0483c59acf74?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">1</div>
 			    	<div class="track-title"> Esa – A muto</div>
 			    	<div class="track-duration"> 07:05</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/126b75610073f3bfff2e03ec1887d459c48b63de?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">2</div>
 			    	<div class="track-title"> Aretha Franklin – Get It Right</div>
-			    	<div class="track-duration"> 06:15</div>
+			    	<div class="track-duration"> 06:17</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/03ae1d5303d8aafea751f405c82a73b14b588748?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">3</div>
 			    	<div class="track-title"> Saraba – Barlia (Kulandjagnho)</div>
 			    	<div class="track-duration"> 04:27</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/fb7404b0ddd6999ac742ef369e72c0f3d4b478a7?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">4</div>
 			    	<div class="track-title"> Geto Boys – Mind Playing Tricks on Me</div>
 			    	<div class="track-duration"> 05:08</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/8a9a349a2285dae2421bc8f0f005a6249f9e553b?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">5</div>
 			    	<div class="track-title"> Curses – Fortify</div>
 			    	<div class="track-duration"> 06:53</div>
 			    </div>
 			    
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">6</div>
 			    	<div class="track-title"> Fresh Band – Come Back Lover</div>
 			    	<div class="track-duration"> 05:13</div>
 			    </div>
 			    
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">7</div>
 			    	<div class="track-title"> Pino Daniele – Chillo È Nu Buono Guaglione - Remastered 2008</div>
 			    	<div class="track-duration"> 02:49</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/a8c4846f37104315a1b4c31e2d1a2a03e7a0d127?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">8</div>
 			    	<div class="track-title"> Greg Henderson – Dreamin&#39;</div>
 			    	<div class="track-duration"> 07:35</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/46281f114da41e2053364de54d611ebae702852f?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">9</div>
 			    	<div class="track-title"> Roger Thornhill, Tru Tones – Dancing (Roger Thornhill Edit)</div>
 			    	<div class="track-duration"> 06:15</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/d9b8dd0b7a650e98795deed0b7187089e9ae0c6b?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">10</div>
 			    	<div class="track-title"> Freddie McGregor – Homeward Bound</div>
 			    	<div class="track-duration"> 02:45</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/490cf7d9957e4bfc096f0c5e8bd5635883f168c7?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">11</div>
 			    	<div class="track-title"> Kornél Kovács – Babasonic</div>
 			    	<div class="track-duration"> 05:01</div>
 			    </div>
 			    
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">12</div>
 			    	<div class="track-title"> Gene Harris – As</div>
 			    	<div class="track-duration"> 07:36</div>
@@ -415,7 +854,7 @@
 	
 	<article>
 		<header>
-		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/3n968NtVYN4A0LksNtGRH5" target="_blank">the goings on #6 <br/>by </a></h2>
+		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/3n968NtVYN4A0LksNtGRH5" target="_blank">the goings on #6 <br/>by shahryar siri</a></h2>
 		<div class="playlist-meta">
 			<div class="playlist-src-meta">on</div>
 			<div class="playlist-source"><span class="show-mob">(</span><a href="https://open.spotify.com/playlist/3n968NtVYN4A0LksNtGRH5" target="_blank">spotify</a><span class="show-mob">)</span></div>
@@ -426,73 +865,73 @@
 			<div class="playlist-image-container"><a href="https://open.spotify.com/playlist/3n968NtVYN4A0LksNtGRH5" target="_blank"><img src="img/the-goings-on-6.jpg"/></a></div>
 			<div class="playlist-tracks">
 				
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/84357ba239566bccb1e30bf1470c47c5ee04ef59?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">1</div>
 			    	<div class="track-title"> Portico Quartet – Endless</div>
 			    	<div class="track-duration"> 04:25</div>
 			    </div>
 			    
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">2</div>
 			    	<div class="track-title"> Avishai Cohen – IB4U</div>
 			    	<div class="track-duration"> 06:37</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/7c63e047b3f380ca0cd3d47cc69a2146d1844c49?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">3</div>
 			    	<div class="track-title"> Steve Moore – Ancient Shorelines I.</div>
 			    	<div class="track-duration"> 05:55</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/4adab8eac12baaeb362beefbead5cd5510ec71f0?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">4</div>
 			    	<div class="track-title"> Skatebård – Love in the Night</div>
 			    	<div class="track-duration"> 08:13</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/3697481fba79e5d88811aade1b4ed4c9025248cd?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">5</div>
 			    	<div class="track-title"> All Natural – Renaissance</div>
 			    	<div class="track-duration"> 04:27</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/6d3267f87ec525175cade5ef7ed8f8c6223399a3?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">6</div>
 			    	<div class="track-title"> Portico Quartet – Ruins</div>
 			    	<div class="track-duration"> 05:34</div>
 			    </div>
 			    
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">7</div>
 			    	<div class="track-title"> Robyn – Baby Forgive Me</div>
 			    	<div class="track-duration"> 04:16</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/c20ec9002e10d6c3fc567ad3c0246f2f236631ff?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">8</div>
 			    	<div class="track-title"> Nathan Surreal – Human Music</div>
 			    	<div class="track-duration"> 06:37</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/3e5c11b6a92038d0a2ac33a465d700c19d540302?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">9</div>
 			    	<div class="track-title"> Kerri Chandler, Joaquin &quot;Joe&quot; Claussell – Escravos de Jó (Robust Horns)</div>
 			    	<div class="track-duration"> 07:26</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/a41e34a81eff35b119b3fdd74ff968e6b7a7d69a?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">10</div>
 			    	<div class="track-title"> Shigeto – Ann Arbor Part 3 &amp; 4</div>
 			    	<div class="track-duration"> 04:21</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/361e5755fbfda1b507aea7f8de261a8aaebb62d5?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">11</div>
 			    	<div class="track-title"> Spirit of Love – The Power of Your Love</div>
 			    	<div class="track-duration"> 04:13</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/9a481a0ba3630926f0b6177df0f48e80ed2c0c0b?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">12</div>
 			    	<div class="track-title"> Dilemma – Il Buffone</div>
 			    	<div class="track-duration"> 03:53</div>
@@ -504,7 +943,7 @@
 	
 	<article>
 		<header>
-		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/5vpi76m1UTBYJRKFfXlFal" target="_blank">the goings on #5 <br/>by </a></h2>
+		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/5vpi76m1UTBYJRKFfXlFal" target="_blank">the goings on #5 <br/>by shahryar siri</a></h2>
 		<div class="playlist-meta">
 			<div class="playlist-src-meta">on</div>
 			<div class="playlist-source"><span class="show-mob">(</span><a href="https://open.spotify.com/playlist/5vpi76m1UTBYJRKFfXlFal" target="_blank">spotify</a><span class="show-mob">)</span></div>
@@ -515,73 +954,73 @@
 			<div class="playlist-image-container"><a href="https://open.spotify.com/playlist/5vpi76m1UTBYJRKFfXlFal" target="_blank"><img src="img/the-goings-on-5.jpg"/></a></div>
 			<div class="playlist-tracks">
 				
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">1</div>
 			    	<div class="track-title"> Giorgio Moroder – Chase</div>
 			    	<div class="track-duration"> 08:26</div>
 			    </div>
 			    
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">2</div>
 			    	<div class="track-title"> Giorgio Moroder – To The Bridge</div>
 			    	<div class="track-duration"> 02:49</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/60ded9b503efb72b3db7878d9d2484b556decf1a?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">3</div>
 			    	<div class="track-title"> The Other People Place – Let Me Be Me</div>
 			    	<div class="track-duration"> 07:46</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/a3587391847add523220a7ffdeac2463a4cf5df2?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">4</div>
 			    	<div class="track-title"> Oktoberklubben – Everyday</div>
 			    	<div class="track-duration"> 05:49</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/86a9e482a07232d34b7f9b0f430c977b109e6b3b?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">5</div>
 			    	<div class="track-title"> Akiko Kiyama, Neal White, Morelle – The Sunset - Neal White &amp; Morelle Remix</div>
 			    	<div class="track-duration"> 06:12</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/2b6c6856b71c6964b14bacac52935459c550b7bd?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">6</div>
 			    	<div class="track-title"> Penny Penny – Dance Khomela</div>
 			    	<div class="track-duration"> 05:32</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/1c78693e6da8fe5ebd0639a5b0bdd5335866ee7d?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">7</div>
 			    	<div class="track-title"> King Gizzard &amp; The Lizard Wizard – Nuclear Fusion</div>
 			    	<div class="track-duration"> 04:15</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/1705c3d4218ddfd9f4ebb859edd041e3e1b73af2?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">8</div>
 			    	<div class="track-title"> Charlotte Adigéry – 1,618</div>
 			    	<div class="track-duration"> 05:58</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/a4f97649b2e5b54d8712f8f54143884f9033c1ae?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">9</div>
 			    	<div class="track-title"> Yazmin Lacey – Still</div>
 			    	<div class="track-duration"> 03:24</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/25323c8ade1101a7d3c4fa172530f40ac7140ce2?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">10</div>
 			    	<div class="track-title"> Lonzo, World Class Wreckin&#39; Cru – Cache Vocal</div>
 			    	<div class="track-duration"> 03:34</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/259284ec928d7f08d7949a59d493337c8178f407?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">11</div>
 			    	<div class="track-title"> Fat Jon – Feel The Void</div>
 			    	<div class="track-duration"> 03:19</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/7d1e9c4ff8aca84f83cef115078dadd105e2ba75?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">12</div>
 			    	<div class="track-title"> Skee Mask – Via Sub Mids</div>
 			    	<div class="track-duration"> 06:32</div>
@@ -593,7 +1032,7 @@
 	
 	<article>
 		<header>
-		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/1P9WuP5puzvIDlWKnYOZ7m" target="_blank">the goings on #4 <br/>by </a></h2>
+		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/1P9WuP5puzvIDlWKnYOZ7m" target="_blank">the goings on #4 <br/>by shahryar siri</a></h2>
 		<div class="playlist-meta">
 			<div class="playlist-src-meta">on</div>
 			<div class="playlist-source"><span class="show-mob">(</span><a href="https://open.spotify.com/playlist/1P9WuP5puzvIDlWKnYOZ7m" target="_blank">spotify</a><span class="show-mob">)</span></div>
@@ -604,73 +1043,73 @@
 			<div class="playlist-image-container"><a href="https://open.spotify.com/playlist/1P9WuP5puzvIDlWKnYOZ7m" target="_blank"><img src="img/the-goings-on-4.jpg"/></a></div>
 			<div class="playlist-tracks">
 				
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">1</div>
 			    	<div class="track-title"> Electric Banana band – Singelingedisco</div>
 			    	<div class="track-duration"> 03:54</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/5c9c50195773bea858b8053f609ab57e350c4bcf?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">2</div>
 			    	<div class="track-title"> Lauer – Phaser7</div>
 			    	<div class="track-duration"> 04:49</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/73d5c89b31ace9bdd583bb391dae9474e7c3caa5?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">3</div>
 			    	<div class="track-title"> Electrick Dragon – Davorite</div>
 			    	<div class="track-duration"> 05:07</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/7433593bcfa7358e7d308bbd42a73a6cac3513a4?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">4</div>
 			    	<div class="track-title"> Bjørn Torske – Clean Air</div>
 			    	<div class="track-duration"> 07:54</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/42bc6fa46a9797a1d2d43ebd27c40d228c375455?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">5</div>
 			    	<div class="track-title"> Barker – Look How Hard I&#39;ve Tried</div>
 			    	<div class="track-duration"> 05:16</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/4658d583399ce3b9c8dc7e9241da0b20d7b2ee60?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">6</div>
 			    	<div class="track-title"> Altin Gün – Vay Dünya</div>
 			    	<div class="track-duration"> 04:20</div>
 			    </div>
 			    
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">7</div>
 			    	<div class="track-title"> Arild Andersen – Hyperborean / Patch Of Light</div>
 			    	<div class="track-duration"> 07:15</div>
 			    </div>
 			    
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">8</div>
 			    	<div class="track-title"> Gang Starr – Code Of The Streets</div>
 			    	<div class="track-duration"> 03:29</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/1cdf4ae905a4f19dd920040df3ff7dcf728ddee8?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">9</div>
 			    	<div class="track-title"> Terrence Parker – Love&#39;s Got Me High - Original Vocal Mix</div>
 			    	<div class="track-duration"> 07:16</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/0f03adf90189f08aad5c395b0bffd261e77bc679?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">10</div>
 			    	<div class="track-title"> Fantastic Man – Galactic Ecstasy</div>
 			    	<div class="track-duration"> 07:51</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/aad5ec8622f166d1f3540603f8a01256ec1be8e0?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">11</div>
 			    	<div class="track-title"> Voilaaa, Dimitri From Paris – On te l&#39;avait dit - Dimitri From Paris Super Disco Blend</div>
 			    	<div class="track-duration"> 07:38</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/6aceefff3817a48aa64e79c30353f17cbfbaf4c1?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">12</div>
 			    	<div class="track-title"> Brock Berrigan – King of the Rats</div>
 			    	<div class="track-duration"> 02:01</div>
@@ -682,7 +1121,7 @@
 	
 	<article>
 		<header>
-		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/0Z3M4pXo9ggcAjheeG73JM" target="_blank">the goings on #3 <br/>by </a></h2>
+		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/0Z3M4pXo9ggcAjheeG73JM" target="_blank">the goings on #3 <br/>by shahryar siri</a></h2>
 		<div class="playlist-meta">
 			<div class="playlist-src-meta">on</div>
 			<div class="playlist-source"><span class="show-mob">(</span><a href="https://open.spotify.com/playlist/0Z3M4pXo9ggcAjheeG73JM" target="_blank">spotify</a><span class="show-mob">)</span></div>
@@ -693,73 +1132,73 @@
 			<div class="playlist-image-container"><a href="https://open.spotify.com/playlist/0Z3M4pXo9ggcAjheeG73JM" target="_blank"><img src="img/the-goings-on-3.jpg"/></a></div>
 			<div class="playlist-tracks">
 				
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/9ac3a787ff23dd0148917b250b564a5425a8060e?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">1</div>
 			    	<div class="track-title"> Shalamar – Over and Over</div>
 			    	<div class="track-duration"> 04:34</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/5a16050e0dc0e7868c74eb954275d8fee4bb7950?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">2</div>
 			    	<div class="track-title"> Trevor &amp; Lisa – Love You out of Your Mind</div>
 			    	<div class="track-duration"> 03:15</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/9a1560ef94aa09f171a50db54add1f160a9d58a7?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">3</div>
 			    	<div class="track-title"> Gidge – Norrland</div>
 			    	<div class="track-duration"> 08:04</div>
 			    </div>
 			    
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">4</div>
 			    	<div class="track-title"> The Chemical Brothers – Star Guitar - 2003 Digital Remaster</div>
 			    	<div class="track-duration"> 06:10</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/e7575bc70e1eb3d893abaa213da375c7a22acc58?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">5</div>
 			    	<div class="track-title"> Larry Heard – Missing You</div>
 			    	<div class="track-duration"> 06:36</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/594a3eaf4cda5449b478e4845beee174d6d9b097?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">6</div>
 			    	<div class="track-title"> Four Tet – LA Trance</div>
 			    	<div class="track-duration"> 05:47</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/2e06dff50870a1bd28885cd793e4a726efa697e7?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">7</div>
 			    	<div class="track-title"> Soul Capsule – Lady Science - NYC Sunrise</div>
 			    	<div class="track-duration"> 09:22</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/deaa73b677c8f122c8dbf8e9fcbbb78d921f3c46?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">8</div>
 			    	<div class="track-title"> Kink – Cloud Generator</div>
 			    	<div class="track-duration"> 07:10</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/f6eb2d54e9337f8de56c0d6a48bec6036ad021c3?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">9</div>
 			    	<div class="track-title"> Arkajo – Vamp</div>
 			    	<div class="track-duration"> 05:39</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/5ea76fd6e3807b0c689bb5499fb922b672949b9e?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">10</div>
 			    	<div class="track-title"> The War On Drugs – Thinking Of A Place</div>
 			    	<div class="track-duration"> 11:10</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/96450d5e184116a1f67dbf9b6885d140df090a18?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">11</div>
 			    	<div class="track-title"> Alogte Oho &amp; His Sounds of Joy – Mam Yinne Wa</div>
 			    	<div class="track-duration"> 03:55</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/c3ae99df17d97e474956a07f522ce0db38eb63d6?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">12</div>
 			    	<div class="track-title"> Raphael Toiné – Femmes pays douces</div>
 			    	<div class="track-duration"> 05:48</div>
@@ -771,7 +1210,7 @@
 	
 	<article>
 		<header>
-		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/3417VheOTphI6hQYTujZhg" target="_blank">the goings on #2 <br/>by </a></h2>
+		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/3417VheOTphI6hQYTujZhg" target="_blank">the goings on #2 <br/>by shahryar siri</a></h2>
 		<div class="playlist-meta">
 			<div class="playlist-src-meta">on</div>
 			<div class="playlist-source"><span class="show-mob">(</span><a href="https://open.spotify.com/playlist/3417VheOTphI6hQYTujZhg" target="_blank">spotify</a><span class="show-mob">)</span></div>
@@ -782,73 +1221,73 @@
 			<div class="playlist-image-container"><a href="https://open.spotify.com/playlist/3417VheOTphI6hQYTujZhg" target="_blank"><img src="img/the-goings-on-2.jpg"/></a></div>
 			<div class="playlist-tracks">
 				
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/34aa40416322bdf4f7d5f37282b88e616001a199?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">1</div>
 			    	<div class="track-title"> Ti Céleste – Misyé dowlé a yo la</div>
 			    	<div class="track-duration"> 03:53</div>
 			    </div>
 			    
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">2</div>
 			    	<div class="track-title"> Thelma Houston – Don&#39;t Know Why I Love You</div>
 			    	<div class="track-duration"> 05:05</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/fd93685c14777ec42d137111515208ab2db59393?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">3</div>
 			    	<div class="track-title"> Bearcubs – Paradise Lost</div>
 			    	<div class="track-duration"> 03:36</div>
 			    </div>
 			    
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">4</div>
 			    	<div class="track-title"> Jorge Ben Jor – Mas, Que Nada!</div>
 			    	<div class="track-duration"> 02:59</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/2f3d2f736475edfa9501888030f087c180236c82?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">5</div>
 			    	<div class="track-title"> Palms Trax – Paws</div>
 			    	<div class="track-duration"> 05:03</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/57b1bbff0b385f0ac68423aca9b1543fba23ca87?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">6</div>
 			    	<div class="track-title"> Brame &amp; Hamo – Midnight Express</div>
 			    	<div class="track-duration"> 07:00</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/b7ec56d12a4aa57b7bab0513c9bffb137063f31e?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">7</div>
 			    	<div class="track-title"> Evigt Mörker – Högre</div>
 			    	<div class="track-duration"> 08:26</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/d0f40cda1a0b09734de0f2f4cf4d74faa0a0266c?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">8</div>
 			    	<div class="track-title"> Charlie – Spacer Woman - Vocal Version</div>
 			    	<div class="track-duration"> 07:29</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/37ab987031cf7f4895be2158d216138b6b29ec08?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">9</div>
 			    	<div class="track-title"> Ian O&#39;Donovan, Satoshi Fumi – Forever Untold - Satoshi Fumi Remix</div>
 			    	<div class="track-duration"> 07:46</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/5945c7acb8035bfd9fca58e81b29bd54309c3b34?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">10</div>
 			    	<div class="track-title"> Lime – I Don&#39;t Wanna Lose</div>
 			    	<div class="track-duration"> 05:58</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/142c2edf94f3c85c02e2a4c2f0ec95ad2c59fb24?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">11</div>
 			    	<div class="track-title"> Randomer – Smokin</div>
 			    	<div class="track-duration"> 05:39</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/359d2bcbd0ba351c4dffa66464266e326a85a31a?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">12</div>
 			    	<div class="track-title"> Makaya McCraven, Joe Armon-Jones, Theon Cross, Nubya Garcia – Halls</div>
 			    	<div class="track-duration"> 03:49</div>
@@ -860,7 +1299,7 @@
 	
 	<article>
 		<header>
-		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/01BkNZhLHW5XZ2Uj2AS8cu" target="_blank">the goings on #1 <br/>by </a></h2>
+		<h2 class="playlist-title"><a href="https://open.spotify.com/playlist/01BkNZhLHW5XZ2Uj2AS8cu" target="_blank">the goings on #1 <br/>by shahryar siri</a></h2>
 		<div class="playlist-meta">
 			<div class="playlist-src-meta">on</div>
 			<div class="playlist-source"><span class="show-mob">(</span><a href="https://open.spotify.com/playlist/01BkNZhLHW5XZ2Uj2AS8cu" target="_blank">spotify</a><span class="show-mob">)</span></div>
@@ -871,73 +1310,73 @@
 			<div class="playlist-image-container"><a href="https://open.spotify.com/playlist/01BkNZhLHW5XZ2Uj2AS8cu" target="_blank"><img src="img/the-goings-on-1.jpg"/></a></div>
 			<div class="playlist-tracks">
 				
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/776c6441eb821101e79ca84cab8810a8bdbc0a7a?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">1</div>
 			    	<div class="track-title"> Fela Kuti – Water No Get Enemy</div>
 			    	<div class="track-duration"> 09:51</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/982b4b9ad353ec65d9861d025dcbb4128ee13dc9?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">2</div>
 			    	<div class="track-title"> África Negra – Bo Lega Caco Modebo</div>
 			    	<div class="track-duration"> 07:37</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/d9c4ce6f9f5a143ed571ff64c7d0456137bf33d0?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">3</div>
 			    	<div class="track-title"> Bobby Benson – Taxi Driver (Version 2)</div>
 			    	<div class="track-duration"> 02:59</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/11af3331a23a8fb7182470d95be007b25ddb5292?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">4</div>
 			    	<div class="track-title"> Ebo Taylor – Heaven</div>
 			    	<div class="track-duration"> 06:05</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/e33e9b215f5969c7a6ee522ac8957fbf6a8bfde3?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">5</div>
 			    	<div class="track-title"> Orlando Julius – James Brown Ride On</div>
 			    	<div class="track-duration"> 06:26</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/897125528531f44fce77482d88657ffaf2a0cc0b?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">6</div>
 			    	<div class="track-title"> Dele Sosimi – E Go Betta</div>
 			    	<div class="track-duration"> 06:09</div>
 			    </div>
 			    
-			    <div class="playlist-track no-prev" data-preview="">
+			    	<div class="playlist-track no-prev">
 			    	<div class="track-number">7</div>
 			    	<div class="track-title"> Madman Jaga – Hankuri</div>
 			    	<div class="track-duration"> 04:20</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/c600e2be199c8ad6dada7d48d82315267f7d8879?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">8</div>
 			    	<div class="track-title"> Antibalas – Si, Se Puede</div>
 			    	<div class="track-duration"> 09:54</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/384d3ee4c7b315b95334a347be8bd666e9385f41?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">9</div>
 			    	<div class="track-title"> Bola Johnson – Lagos Sisi</div>
 			    	<div class="track-duration"> 03:23</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/2c239f4b1e2f8daad95e50815b5fc8a62298a11a?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">10</div>
 			    	<div class="track-title"> Ebo Taylor – Love and Death</div>
 			    	<div class="track-duration"> 06:55</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/1c14965950934de46f447fa195640b09d1f56a70?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">11</div>
 			    	<div class="track-title"> Dérobé Dance Band – Gogoplata</div>
 			    	<div class="track-duration"> 02:37</div>
 			    </div>
 			    
-			    <div class="playlist-track " data-preview="https://p.scdn.co/mp3-preview/2f7aaf0a60a6d0d61d415039d2524000fc01ab42?cid=2d0a168a38724680b0b884d3b87d4849">
+			    	<div class="playlist-track ">
 			    	<div class="track-number">12</div>
 			    	<div class="track-title"> Ikebe Shakedown – Hard Steppin&#39;</div>
 			    	<div class="track-duration"> 03:04</div>
@@ -948,11 +1387,11 @@
 	</article>
 	
 	</div>
-	<audio>
+<!-- 	<audio>
 	<source src=""></source>
 	Your browser isn't invited for super fun audio time.
-	</audio>
-	<script type="text/javascript">
+	</audio> -->
+<!-- 	<script type="text/javascript">
 		var audio = document.querySelector('audio');
 		audio.onended = function() {
 		    document.querySelector('.playing').classList.remove('playing');
@@ -971,7 +1410,7 @@
 	        		promise = audio.play();
 	        		if (promise !== undefined) {
 						  promise.then(_ => {
-						    
+
 						  }).catch(error => {
 						  });
 					}
@@ -983,9 +1422,9 @@
 	        		// e.currentTarget.innerText = 'pause';
 	        	}
 	        });
-	       
+
 	    }
-	</script>
+	</script> -->
 
 </body>
 </html>
