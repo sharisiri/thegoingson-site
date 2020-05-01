@@ -1,2 +1,5 @@
 node_modules/
 .DS_Store
+img/.DS_Store
+site/.DS_Store
+site/img/.DS_Store
