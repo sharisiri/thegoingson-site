@@ -1,6 +1,4 @@
 {
-  "name": "goingson",
-  "version": "1.0.0",
   "description": "",
   "main": "build.js",
   "scripts": {
