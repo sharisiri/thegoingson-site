@@ -10,9 +10,9 @@
   "author": "måns peterson",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.6.0",
-    "got": "^8.2.0",
-    "nunjucks": "^3.1.2",
+    "async": "^3.2.0",
+    "got": "^11.0.3",
+    "nunjucks": "^3.2.1",
     "sharp": "^0.23.4"
   }
 }
