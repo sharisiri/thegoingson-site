@@ -5,9 +5,8 @@ const nunjucks = require('nunjucks');
 const async = require('async');
 const sharp = require('sharp');
 
-// const client_cred = 'MmQwYTE2OGEzODcyNDY4MGIwYjg4NGQzYjg3ZDQ4NDk6MTE5NzQyZTliNTc2NDk5OWE3MWQxZDRjNjQ5M2RlYWY=';
 const client_cred =
-  'BQDJxs_XdlrSvwp4ngymJ7aCqGBuxP0kFkul11e8JQWfWknZOWmoSCIJOoNpcGw-hOfchBhdnSEBSzrNyvg';
+  'MmQwYTE2OGEzODcyNDY4MGIwYjg4NGQzYjg3ZDQ4NDk6MTE5NzQyZTliNTc2NDk5OWE3MWQxZDRjNjQ5M2RlYWY=';
 var plObjects = [];
 (async () => {
   try {
