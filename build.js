@@ -5,7 +5,8 @@ const nunjucks = require('nunjucks');
 const async = require('async');
 const sharp = require('sharp');
 
-const client_cred = '119742e9b5764999a71d1d4c6493deaf=';
+const client_cred =
+  'MmQwYTE2OGEzODcyNDY4MGIwYjg4NGQzYjg3ZDQ4NDk6MTE5NzQyZTliNTc2NDk5OWE3MWQxZDRjNjQ5M2RlYWY=';
 var plObjects = [];
 (async () => {
   try {
