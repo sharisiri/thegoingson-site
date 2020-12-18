@@ -2,7 +2,7 @@
   "name": "goingson",
   "version": "1.0.0",
   "description": "",
-  "main": "build.js",
+  "main": "public/build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node build.js"
